@@ -1,0 +1,25 @@
+{
+  "users": [
+    {
+      "name": "Liban Hussein",
+      "birthday": "2021-11-12",
+      "email": "liban57hotmail.com",
+      "password": "saxas",
+      "id": 1
+    },
+    {
+      "name": "",
+      "birthday": "",
+      "email": "",
+      "password": "asxa",
+      "id": 2
+    },
+    {
+      "name": "Liban Hussein",
+      "birthday": "2021-11-10",
+      "email": "Libanhussein11@hotmail.com",
+      "password": "scscsc",
+      "id": 3
+    }
+  ]
+}

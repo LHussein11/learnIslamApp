@@ -1,0 +1,67 @@
+:root {
+    --margin-vertical--form-el: 0.7rem 0 0.7rem 0;
+    --validation--color--warning: rgb(248, 6, 6);
+    --loginlink-color--blue: #29C2FB;
+    --loginlink--color--black: #9A9EA6;
+}
+
+.nameBirthField {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.nameWrapper,
+.birthdayWrapper,
+.emailWrapper,
+.passWrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.btnForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btnForm button {
+    width: 100%;
+    background: transparent linear-gradient(180deg, #24C6FB 0%, #4DA2FE 100%) 0% 0% no-repeat padding-box;
+    color: #fff;
+}
+
+label {
+    color: var(--label--color);
+}
+
+div input {
+    height: 3.125rem;
+    margin: var(--margin-vertical--form-el);
+}
+
+.nameWrapper,
+.birthdayWrapper {
+    width: 12rem;
+}
+
+.emailWrapper,
+.passWrapper {
+    width: 25rem;
+}
+
+.passWrapper p {
+    color: var(--validation--color--warning);
+}
+
+.loginLink p {
+    color: var(--loginlink--color--black);
+}
+
+.loginLink p span {
+    color: var(--loginlink-color--blue);
+}
+
+.loginLink p a {
+    text-decoration: none;
+}

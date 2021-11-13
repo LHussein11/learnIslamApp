@@ -1,0 +1,57 @@
+:root {
+    --bg--color--one:#29C2FB; 
+    --bg--color--two:#EDF3F7; 
+    --label--color: #000;
+}
+
+.container {
+    display: flex;
+}
+
+.sectionOneLogin {
+    background-color: var(--bg--color--one);
+    width: 40%;
+    min-height: 100vh;
+}
+
+.sectionTwoLogin {
+    width: 60%;
+    background-color: var(--bg--color--two);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.smallLogo {
+    padding: 1.7rem;
+}
+
+.fullImage img {
+    width: 100%;
+    height: auto;
+}
+
+/* FORM */
+
+.emailLoginWrapper,
+.passwordLoginWrapper
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.passwordLoginWrapper p {
+    color: var(--validation--color--warning);
+}
+
+.registerLink p {
+    color: var(--loginlink--color--black);
+}
+
+.registerLink p span {
+    color: var(--loginlink-color--blue);
+}
+
+.registerLink p a {
+    text-decoration: none;
+}

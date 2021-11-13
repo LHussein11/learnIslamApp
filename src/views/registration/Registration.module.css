@@ -1,0 +1,32 @@
+:root {
+    --bg--color--one:#29C2FB; 
+    --bg--color--two:#EDF3F7; 
+    --label--color: #000;
+}
+
+.container {
+    display: flex;
+}
+
+.sectionOne {
+    background-color: var(--bg--color--one);
+    width: 40%;
+    min-height: 100vh;
+}
+
+.sectionTwo {
+    width: 60%;
+    background-color: var(--bg--color--two);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.smallLogo {
+    padding: 1.7rem;
+}
+
+.bigImage img {
+    width: 100%;
+    height: auto;
+}
