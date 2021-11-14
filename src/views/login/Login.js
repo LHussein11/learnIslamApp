@@ -42,6 +42,9 @@ function Login() {
                         {...register('password')}
                         />
                     </div>
+                    <div className={styles.btnLogin}>
+                        <button>LOG IN</button>
+                    </div>
                     <div className={styles.registerLink}>
                         <p>Not registered yet? <Link to="/registration"><span>Create a free account</span></Link></p>
                     </div>

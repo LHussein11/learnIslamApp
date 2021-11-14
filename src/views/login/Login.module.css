@@ -2,6 +2,8 @@
     --bg--color--one:#29C2FB; 
     --bg--color--two:#EDF3F7; 
     --label--color: #000;
+
+    --btn--white--color: #FFFFFF;
 }
 
 .container {
@@ -28,7 +30,7 @@
 
 .fullImage img {
     width: 100%;
-    height: auto;
+    height: 85vh;
 }
 
 /* FORM */
@@ -55,3 +57,20 @@
 .registerLink p a {
     text-decoration: none;
 }
+
+.btnLogin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btnLogin button {
+    width: 100%;
+    background: transparent linear-gradient(180deg, #24C6FB 0%, #4DA2FE 100%) 0% 0% no-repeat padding-box;
+    color: #fff;
+    border: 3px solid var(--btn--white--color);
+    height: 3.25rem;
+    border-radius: 10px;
+    font-size: 1.25rem;
+    font-weight: bold;
+}it 

@@ -3,6 +3,8 @@
     --validation--color--warning: rgb(248, 6, 6);
     --loginlink-color--blue: #29C2FB;
     --loginlink--color--black: #9A9EA6;
+
+    --btn--white--color: #fff;
 }
 
 .nameBirthField {
@@ -29,6 +31,11 @@
     width: 100%;
     background: transparent linear-gradient(180deg, #24C6FB 0%, #4DA2FE 100%) 0% 0% no-repeat padding-box;
     color: #fff;
+    border: 3px solid var(--btn--white--color);
+    height: 3.25rem;
+    border-radius: 10px;
+    font-size: 1.25rem;
+    font-weight: bold;
 }
 
 label {
