@@ -20,6 +20,7 @@ function Form() {
             })
             .then(function (response){
                 console.log(response);
+                alert('Sign up succesful!');
             })
             .catch(function (error) {
                 console.log(error);

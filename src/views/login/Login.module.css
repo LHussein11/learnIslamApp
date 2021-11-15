@@ -73,4 +73,8 @@
     border-radius: 10px;
     font-size: 1.25rem;
     font-weight: bold;
-}it 
+}
+
+form p {
+    color: red;
+}

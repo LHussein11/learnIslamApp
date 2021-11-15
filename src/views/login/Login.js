@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import axios from 'axios';
 
 import styles from '../login/Login.module.css'
@@ -13,6 +13,22 @@ function Login() {
 
     const onSubmit = data => {
         console.log(data);
+
+        axios.post('http://localhost:5000/api/auth/login', {
+            email: data.email,
+            password: data.password
+        })
+        .then(function (response) {
+            console.log("response", response);
+
+            localStorage.setItem("login", JSON.stringify({
+                userLogin: true,
+                token: response.data.access_token
+            }))
+        })
+        .catch(function (error) {
+            console.log(error.response.data.message);
+        })
     }
     return (
         <div className={styles.container}>
@@ -31,16 +47,18 @@ function Login() {
                         <input 
                         type="text" 
                         placeholder="Your email" 
-                        {...register('email')}
+                        {...register('email', {required: true})}
                         />
+                        {errors.email && <p>This field is required</p>}
                     </div>
                     <div className={styles.passwordLoginWrapper}>
                         <label>PASSWORD</label>
                         <input 
                         type="text" 
                         placeholder="Your password"
-                        {...register('password')}
+                        {...register('password', {required: true})}
                         />
+                        {errors.password && <p>This field is required</p>}
                     </div>
                     <div className={styles.btnLogin}>
                         <button>LOG IN</button>
