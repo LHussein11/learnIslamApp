@@ -1,0 +1,21 @@
+:root {
+    --main--color: #4cbbfb;
+    --text--color: #fff;
+    --btn--color: #76D885;
+
+
+    --poppins--font: 'Poppins', sans-serif;
+    --lato--font: 'Lato', sans-serif;
+}
+
+.container {
+    background-color: var(--main--color);
+}
+
+.profileMainHeading {
+    color: var(--text--color);
+}
+
+main {
+    min-height: calc(100vh - 6.2vh);
+}

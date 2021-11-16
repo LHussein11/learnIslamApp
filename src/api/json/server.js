@@ -25,15 +25,15 @@ function isAuthenticated({email, password}) {
 }
 
 server.post("/api/auth/register", (req, res) => {
-    const {email, password} = req.body;
-    if(!isAuthenticated({email, password})){
+    const {name, birthday, email, password} = req.body;
+    if(isAuthenticated({email, password})){
         const status = 401;
         const message = "Email & Password already exist";
         res.status(status).json({status, message});
         return;
     }
 
-    fs.readFile("./db.json", (err, data) => {
+    fs.readFile("src/api/json/db.json", (err, data) => {
         if(err) {
             const status = 401;
             const message = err;
@@ -42,11 +42,11 @@ server.post("/api/auth/register", (req, res) => {
         }
 
         data = JSON.parse(data.toString());
-        let last_item_id = data.users[data.users.length - 1].id;
+        let last_item_id =  data.users.length === 0 ? 0 : data.users[data.users.length - 1].id
 
-        data.users.push({id: last_item_id + 1, email: email, password: password});
+        data.users.push({name: name, birthday: birthday, email: email, password: password, id: last_item_id + 1});
 
-        let writeData = fs.writeFile("./db.json", 
+        let writeData = fs.writeFile("src/api/json/db.json", 
         JSON.stringify(data),
         (err, result) => {
             if(err) {
@@ -80,3 +80,11 @@ server.post("/api/auth/login", (req, res) => {
 server.listen(5000, () => {
     console.log("JSON server is running");
 })
+
+
+/*
+{id: last_item_id + 1, email: email, password: password}
+{name: name, birthday: birthday, email: email, password: password, id: id}
+
+
+*/

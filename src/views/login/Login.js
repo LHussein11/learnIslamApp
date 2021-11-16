@@ -3,23 +3,25 @@ import axios from 'axios';
 
 import styles from '../login/Login.module.css'
 import { useForm } from 'react-hook-form'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 import bookLogo from '../../assets/images/Login Page/logo-small.png'
 import fullImage from '../../assets/images/Login Page/pray-picture.png'
 
 function Login() {
     const { register, handleSubmit, formState: { errors }} = useForm();
+    let navigate = useNavigate();
 
     const onSubmit = data => {
         console.log(data);
-
         axios.post('http://localhost:5000/api/auth/login', {
             email: data.email,
             password: data.password
         })
         .then(function (response) {
             console.log("response", response);
+            alert(`You successfully logged in ${data.email}`);
+            navigate('/profile');
 
             localStorage.setItem("login", JSON.stringify({
                 userLogin: true,
@@ -28,6 +30,7 @@ function Login() {
         })
         .catch(function (error) {
             console.log(error.response.data.message);
+            alert('Wrong info');
         })
     }
     return (
@@ -54,7 +57,7 @@ function Login() {
                     <div className={styles.passwordLoginWrapper}>
                         <label>PASSWORD</label>
                         <input 
-                        type="text" 
+                        type="password" 
                         placeholder="Your password"
                         {...register('password', {required: true})}
                         />

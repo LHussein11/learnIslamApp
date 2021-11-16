@@ -12,7 +12,7 @@ function Form() {
             console.log(data.name);
 
             // Send data to json database
-            axios.post('http://localhost:8000/users', {
+            axios.post('http://localhost:5000/api/auth/register', {
                 name: data.name,
                 birthday: data.birthday,
                 email: data.email,
@@ -57,7 +57,7 @@ function Form() {
             <div className={styles.passWrapper}>
                 <label>PASSWORD</label>
                 <input 
-                type="text" 
+                type="password" 
                 placeholder="Min. 8 characters"
                 {...register('password', {required: true, maxLength: 8})}
                 />

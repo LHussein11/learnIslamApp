@@ -1,18 +1,1 @@
-{
-  "users": [
-    {
-      "name": "Jamac",
-      "birthday": "2021-11-13",
-      "email": "Jamac11@hotmail.com",
-      "password": "12333",
-      "id": 1
-    },
-    {
-      "name": "Liban",
-      "birthday": "2021-11-15",
-      "email": "liban57hotmail.com",
-      "password": "12345",
-      "id": 2
-    }
-  ]
-}
+{"users":[{"name":"Hussein","birthday":"2021-11-15","email":"hussein1233@gmail.com","password":"1212","id":1},{"name":"Hassan","birthday":"2021-11-19","email":"hassan1@gmail.com","password":"1234","id":2},{"name":"Liban","birthday":"2021-11-16","email":"liban@gmail.com","password":"liban1","id":3}]}
