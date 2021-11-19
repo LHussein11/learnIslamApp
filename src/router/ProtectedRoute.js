@@ -1,12 +1,27 @@
 import React from 'react'
-import { Redirect, Route } from "react-router-dom";
+import { Route, Redirect } from "react-router-dom";
 
-function ProtectedRoute({component: Component, ...rest}) {
+function ProtectedRoute({children, ...rest}) {
+    // Authentication token
+    let localTokenCheck = localStorage.getItem('login');
+    let token = localTokenCheck && JSON.parse(localTokenCheck).token;
+    console.log(token);
+
     return (
-        <Route {...rest}
-        
-        />
+        <Route {...rest} render={({ location }) => {
+            return token ? children :<Redirect to={{
+                pathname: "/login",
+                state: { from: location}
+            }}/>
+        }}/>
     )
 }
 
 export default ProtectedRoute
+
+
+/*
+    let localTokenCheck = localStorage.getItem('login');
+    let token = localTokenCheck && JSON.parse(localTokenCheck).token;
+    console.log(token);
+*/

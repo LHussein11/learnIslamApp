@@ -1,27 +1,32 @@
-import React from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 
 import styles from '../login/Login.module.css'
 import { useForm } from 'react-hook-form'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link, Redirect } from 'react-router-dom'
 
+//import Profile from '../profile/Profile'
 import bookLogo from '../../assets/images/Login Page/logo-small.png'
 import fullImage from '../../assets/images/Login Page/pray-picture.png'
 
 function Login() {
+    
     const { register, handleSubmit, formState: { errors }} = useForm();
-    let navigate = useNavigate();
 
-    const onSubmit = data => {
-        console.log(data);
-        axios.post('http://localhost:5000/api/auth/login', {
+    const [redirectToProfile, setRedirectToProfile] = useState(false);
+
+    const onSubmit = async (data, e) => {
+        e.preventDefault();
+        await axios.post('http://localhost:5000/api/auth/login', {
             email: data.email,
             password: data.password
         })
         .then(function (response) {
-            console.log("response", response);
-            alert(`You successfully logged in ${data.email}`);
-            navigate('/profile');
+            // console.log("response", response);
+            // console.log(response.data.access_token);
+            console.log('Log in successful');
+            //history.push('/profile')
+            
 
             localStorage.setItem("login", JSON.stringify({
                 userLogin: true,
@@ -32,7 +37,14 @@ function Login() {
             console.log(error.response.data.message);
             alert('Wrong info');
         })
+        setRedirectToProfile(true);
     }
+
+    console.log(redirectToProfile);
+    if(redirectToProfile === true) {
+        return <Redirect to="/profile"/>
+    }
+
     return (
         <div className={styles.container}>
             <div className={styles.sectionOneLogin}>
