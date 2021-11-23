@@ -1,0 +1,11 @@
+:root {
+    --header--color: #FFFFFF;
+}
+
+.container {
+    background-color: var(--header--color);
+}
+
+.container h1 {
+    color: lightgreen;
+}

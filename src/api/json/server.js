@@ -64,7 +64,6 @@ server.post("/api/auth/register", (req, res) => {
 
 server.post("/api/auth/login", (req, res) => {
     const {email, password} = req.body;
-    console.log(res);
 
     if(!isAuthenticated({email, password})){
         const status = 401;
@@ -80,5 +79,3 @@ server.post("/api/auth/login", (req, res) => {
 server.listen(5000, () => {
     console.log("JSON server is running");
 })
-
-
