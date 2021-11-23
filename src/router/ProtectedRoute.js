@@ -5,7 +5,6 @@ function ProtectedRoute({children, ...rest}) {
     // Authentication token
     let localTokenCheck = localStorage.getItem('login');
     let token = localTokenCheck && JSON.parse(localTokenCheck).token;
-    console.log(token);
 
     return (
         <Route {...rest} render={({ location }) => {
@@ -18,10 +17,3 @@ function ProtectedRoute({children, ...rest}) {
 }
 
 export default ProtectedRoute
-
-
-/*
-    let localTokenCheck = localStorage.getItem('login');
-    let token = localTokenCheck && JSON.parse(localTokenCheck).token;
-    console.log(token);
-*/

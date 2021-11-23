@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 import styles from '../login/Login.module.css'
@@ -17,20 +17,21 @@ function Login() {
 
     const onSubmit = async (data, e) => {
         e.preventDefault();
+
+        // POST request
         await axios.post('http://localhost:5000/api/auth/login', {
             email: data.email,
             password: data.password
         })
         .then(function (response) {
-            // console.log("response", response);
-            // console.log(response.data.access_token);
+            console.log("response", response);
+            console.log(data);
             console.log('Log in successful');
-            //history.push('/profile')
-            
 
             localStorage.setItem("login", JSON.stringify({
                 userLogin: true,
-                token: response.data.access_token
+                token: response.data.access_token,
+                email: data.email
             }))
         })
         .catch(function (error) {
@@ -40,9 +41,10 @@ function Login() {
         setRedirectToProfile(true);
     }
 
-    console.log(redirectToProfile);
     if(redirectToProfile === true) {
-        return <Redirect to="/profile"/>
+        return <Redirect to={{
+            pathname: '/profile',
+        }}/>
     }
 
     return (

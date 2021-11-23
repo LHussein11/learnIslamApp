@@ -18,4 +18,47 @@
 
 main {
     min-height: calc(100vh - 6.2vh);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* PROFILE CARD */
+
+.cardsContainer {
+    display: flex;
+}
+
+.profileCardWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.profileCard {
+    background-color: lightgreen;
+}
+
+.profileCard,
+.signUpCard {
+    font-size: 2.5rem;
+}
+
+.profileCardWrapper a {
+    text-decoration: none;
+    color: var(--text--color);
+}
+
+.cards {
+    border: 3px solid var(--text--color);
+    border-radius: 5px;
+    width: 7rem;
+    height: 7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2.5rem 1rem 0 0;
+    cursor: pointer;
 }

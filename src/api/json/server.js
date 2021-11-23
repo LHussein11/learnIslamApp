@@ -17,7 +17,6 @@ function createToken(payload) {
     return jwt.sign(payload, SECRET_KEY, {expiresIn});
 }
 
-console.log(userdb.users);
 function isAuthenticated({email, password}) {
     return (
         userdb.users.findIndex((user) => user.email === email && user.password === password) !== -1
@@ -65,6 +64,7 @@ server.post("/api/auth/register", (req, res) => {
 
 server.post("/api/auth/login", (req, res) => {
     const {email, password} = req.body;
+    console.log(res);
 
     if(!isAuthenticated({email, password})){
         const status = 401;
@@ -82,9 +82,3 @@ server.listen(5000, () => {
 })
 
 
-/*
-{id: last_item_id + 1, email: email, password: password}
-{name: name, birthday: birthday, email: email, password: password, id: id}
-
-
-*/
