@@ -1,11 +1,67 @@
 :root {
     --header--color: #FFFFFF;
+    --settings--box--color :linear-gradient(180deg, #76D885 0%, #42C155 100%);
+    --blue--color: #3DB0FD;
 }
 
 .container {
     background-color: var(--header--color);
+    height: 10vh;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0px 5px 5px rgb(175, 174, 174);
+    display: flex;
+    justify-content: space-between;
+}
+
+.lessonsLogosWrapper,
+.settingsWrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.heartWrapper {
+    width: 5rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+.lessonsLogosWrapper {
+    margin: 0 0 0 4rem;
+    width: 13rem;
+}
+
+.settingsWrapper {
+    margin: 0 4rem 0 0;
+    width: 10rem;
 }
 
 .container h1 {
     color: lightgreen;
+}
+
+
+.profileSettings {
+    border-radius: 5px;
+    width: 2.2rem;
+    height: 2.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background: var(--settings--box--color);
+}
+
+.hatLogoWrapper,
+ .quizLogoWrapper {
+     display: flex;
+     justify-content: space-around;
+     width: 6rem;
+     cursor: pointer;
+ }
+
+.hatLogoWrapper p,
+.quizLogoWrapper p {
+    color: var(--blue--color);
+    font-weight: bold;
 }

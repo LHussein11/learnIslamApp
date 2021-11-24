@@ -1,8 +1,9 @@
 :root {
-    --main--color: #EDF3F7;
+    --landing-main--color: #EDF3F7;
 }
 
 
 .container {
-    background-color: var(--main--color);
+    background-color: var(--landing-main--color);
+    min-height: 100vh;
 }
