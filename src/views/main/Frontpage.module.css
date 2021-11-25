@@ -10,7 +10,6 @@
 
 body {
     font-family: var(--poppins--font);
-    color: var(--text--color);
 }
 
 .wrapper {

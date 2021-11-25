@@ -1,9 +1,18 @@
 :root {
     --landing-main--color: #EDF3F7;
+    --profile--settigns--header--color: #363E46;
 }
 
 
 .container {
     background-color: var(--landing-main--color);
     min-height: 100vh;
+}
+
+.profileSettingsHeader {
+    color: var(--profile--settigns--header--color);
+}
+
+.mainContent {
+    padding: 5rem;
 }
