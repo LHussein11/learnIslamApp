@@ -16,3 +16,8 @@
 .mainContent {
     padding: 5rem;
 }
+
+.componentsWrapper {
+    display: flex;
+    justify-content: space-between;
+}

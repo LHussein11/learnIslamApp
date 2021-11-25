@@ -1,0 +1,26 @@
+.container {
+    margin: 2.5rem 0 0 0;
+}
+
+.cardContainer {
+    border: 2px solid #fff;
+    width: 20rem;
+    height: 9rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 3px 2px grey;
+    margin: 1rem 0 0 0;
+}
+
+.textContainer {
+    width: 12rem;
+}
+
+.textContainer p {
+    text-align: center;
+}

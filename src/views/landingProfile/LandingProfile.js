@@ -3,6 +3,8 @@ import React, { useEffect, useState } from 'react'
 import Styles from './LandingProfile.module.css'
 import LandingProfileHeader from '../../components/LandingProfileHeader'
 import Chapters from '../../components/Chapters'
+import Lessons from '../../components/Lessons'
+import Test from '../../components/Test'
 
 import axios from 'axios'
 
@@ -26,7 +28,11 @@ function LandingProfile() {
             <LandingProfileHeader />
             <div className={Styles.mainContent}>
                 <h1 className={Styles.profileSettingsHeader}>Profile Settings</h1>
-                <Chapters chaptersData={data} />
+                <div className={Styles.componentsWrapper}>
+                    <Chapters chaptersData={data} />
+                    <Lessons />
+                    <Test />
+                </div>
             </div>
         </div>
     )
