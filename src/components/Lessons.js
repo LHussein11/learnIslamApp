@@ -3,7 +3,10 @@ import React from 'react'
 import Styles from '../componentsStyle/Lessons.module.css'
 import gradLogo from '../assets/images/Chapters Page/study-selected-icon.png'
 
-function Lessons() {
+function Lessons({ chaptersData, lessonOpened }) {
+    if(chaptersData === undefined){
+        return null;
+    }
 
     let lessonsCard = 
     <div className={Styles.cardContainer}>
@@ -13,12 +16,13 @@ function Lessons() {
         </div>
     </div>;
 
-    console.log(lessonsCard);
-    
+
     return (
         <div className={Styles.container}>
             <h4>Lessons</h4>
-            {lessonsCard}
+            {lessonOpened ? lessonOpened : lessonsCard}
+            {/* {lessonsCard}
+            {lessonOpened} */}
         </div>
     )
 }

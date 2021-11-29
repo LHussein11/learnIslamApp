@@ -3,14 +3,18 @@ import {v4 as uuidv4 } from 'uuid'
 
 import Styles from '../componentsStyle/Chapters.module.css'
 
-function Chapters({ chaptersData }) {
+function Chapters({ chaptersData, choosenChapter }) {
 
     if(chaptersData === undefined) {
         return null
     }
     
     let chapterMarkUp = chaptersData.map(chapter => (
-        <div key={uuidv4()} className={Styles.cardContainer}>
+        <div 
+        key={uuidv4()} 
+        className={Styles.cardContainer}
+        onClick={choosenChapter}
+        >
             <h3>{chapter.chapterNr}</h3>
             <div className={Styles.progressWrapper}>
                 <progress className={Styles.progressBar} max="100" value="50"></progress>
