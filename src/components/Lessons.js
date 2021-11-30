@@ -7,7 +7,7 @@ function Lessons({ chaptersData, lessonOpened }) {
     if(chaptersData === undefined){
         return null;
     }
-
+    
     let lessonsCard = 
     <div className={Styles.cardContainer}>
         <img src={gradLogo} alt="graduation-logo"/>
@@ -16,6 +16,7 @@ function Lessons({ chaptersData, lessonOpened }) {
         </div>
     </div>;
 
+    console.log(lessonOpened);
 
     return (
         <div className={Styles.container}>

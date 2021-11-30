@@ -11,7 +11,6 @@ import axios from 'axios'
 function LandingProfile() {
     const [data, setData] = useState();
     const [showLesson, setShowLesson] = useState();
-    const [lessonsData, showLessonsData] = useState({});
 
     const chaptersData = async () => {
         await axios.get(`http://localhost:8000/chapters`)
@@ -30,8 +29,6 @@ function LandingProfile() {
 
 
     let choosenChapter = () => {
-        console.log("Chapter clicked!");
-
         data.map(dataEl => {
             
             return dataEl.Lessons?.map(lessonsEl => {
@@ -47,7 +44,6 @@ function LandingProfile() {
     }
 
     let lessonOpened = (a) => {
-        console.log(a);
         return setShowLesson(a);
     }
 
@@ -67,3 +63,20 @@ function LandingProfile() {
 }
 
 export default LandingProfile
+
+
+/*
+        data.map((dataEl, index) => {
+            return dataEl.Lessons?.map((lessonsEl, index) => {
+                if(lessonsEl.LessonNr === undefined) {
+                    return null
+                }
+                let lessonsComp = 
+                <div>
+                    <h2>{lessonsEl.LessonNr}</h2>
+                    <p>{lessonsEl.LessonData}</p>
+                </div>;
+                return lessonOpened(lessonsComp)
+            })
+        })
+*/
