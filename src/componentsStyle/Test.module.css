@@ -25,3 +25,7 @@
 .textContainer p {
     text-align: center;
 }
+
+.headingColor {
+    color: var(--chapters--header--color);
+}

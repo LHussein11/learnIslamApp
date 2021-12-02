@@ -68,27 +68,74 @@
   ],
   "chapters": [
     {
-      "chapterNr": "Chapter 1",
-      "Lessons": [
-        {"LessonNr": "Lesson 1"},
-        {"LessonNr": "Lesson 2"},
-        {"LessonNr": "Lesson 3"},
-        {"LessonNr": "Lesson 4"},
-        {"LessonNr": "Lesson 5"}
+      "chapterData": [
+        {
+          "chapter": "Chapter 1",
+          "lessons": [
+            { "LessonNr": "ch 1: Lesson 1" },
+            { "LessonNr": "ch 1: Lesson 2" },
+            { "LessonNr": "ch 1: Lesson 3" },
+            { "LessonNr": "ch 1: Lesson 4" },
+            { "LessonNr": "ch 1: Lesson 5" }
+          ]
+        }
       ]
     },
     {
-      "chapterNr": "Chapter 2",
-      "Lessons": [
-        {"LessonNr": "En test lektion"},
-        {"LessonNr": "En test lektion"},
-        {"LessonNr": "En test lektion"},
-        {"LessonNr": "En test lektion"},
-        {"LessonNr": "En test lektion"}
+      "chapterData": [
+        {
+          "chapter": "Chapter 2",
+          "lessons": [
+            { "LessonNr": "ch 2: Lesson 1" },
+            { "LessonNr": "ch 2: Lesson 2" },
+            { "LessonNr": "ch 2: Lesson 3" },
+            { "LessonNr": "ch 2: Lesson 4" },
+            { "LessonNr": "ch 2: Lesson 5" }
+          ]
+        }
       ]
     },
-    {"chapterNr": "Chapter 3"},
-    {"chapterNr": "Chapter 4"},
-    {"chapterNr": "Chapter 5"}
+    {
+      "chapterData": [
+        {
+          "chapter": "Chapter 3",
+          "lessons": [
+            { "LessonNr": "ch 3: Lesson 1" },
+            { "LessonNr": "ch 3: Lesson 2" },
+            { "LessonNr": "ch 3: Lesson 3" },
+            { "LessonNr": "ch 3: Lesson 4" },
+            { "LessonNr": "ch 3: Lesson 5" }
+          ]
+        }
+      ]
+    },
+    {
+      "chapterData": [
+        {
+          "chapter": "Chapter 4",
+          "lessons": [
+            { "LessonNr": "ch 4: Lesson 1" },
+            { "LessonNr": "ch 4: Lesson 2" },
+            { "LessonNr": "ch 4: Lesson 3" },
+            { "LessonNr": "ch 4: Lesson 4" },
+            { "LessonNr": "ch 4: Lesson 5" }
+          ]
+        }
+      ]
+    },
+    {
+      "chapterData": [
+        {
+          "chapter": "Chapter 5",
+          "lessons": [
+            { "LessonNr": "ch 5: Lesson 1" },
+            { "LessonNr": "ch 5: Lesson 2" },
+            { "LessonNr": "ch 5: Lesson 3" },
+            { "LessonNr": "ch 5: Lesson 4" },
+            { "LessonNr": "ch 5: Lesson 5" }
+          ]
+        }
+      ]
+    }
   ]
 }

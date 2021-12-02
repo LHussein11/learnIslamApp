@@ -25,3 +25,50 @@
 .textContainer p {
     text-align: center;
 }
+
+.headingColor {
+    color: var(--chapters--header--color);
+}
+
+/* CARD */
+
+.cardContainer {
+    border: 2px solid #fff;
+    width: 20rem;
+    height: 6rem;
+  
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 3px 2px grey;
+    margin: 1rem 0 0 0;
+    cursor: pointer;
+  }
+
+  .cardSectionWrapper {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+  }
+
+  .leftSection {
+      width: 45%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+
+  .paraghrapWrapper {
+      width: 80%;
+      margin: 5px 0 0 0;
+  }
+
+  /* BUTTON CARD */ 
+
+  .btnRead {
+      background: linear-gradient(180deg, #76D885 0%, #42C155 100%);
+      color: #fff;
+      width: 100px;
+      height: 32px;
+      border-radius: 5px;
+  }

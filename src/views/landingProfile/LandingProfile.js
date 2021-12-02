@@ -9,43 +9,32 @@ import Test from '../../components/Test'
 import axios from 'axios'
 
 function LandingProfile() {
-    const [data, setData] = useState();
-    const [showLesson, setShowLesson] = useState();
+    const [getData, setGetData] = useState([]);
+    const [lessonData, setLessonData] = useState([]);
 
-    const chaptersData = async () => {
-        await axios.get(`http://localhost:8000/chapters`)
+    async function dataSet() {
+        await axios.get('http://localhost:8000/chapters')
         .then(response => response.data)
-        .then(data => setData(data))
+        .then(data => {
+            data.map(chapterData => {
+                return chapterData.chapterData.map(dataEl => {
+                    return setGetData((prevState) => [...prevState, {key: dataEl.chapter, key2: dataEl.lessons}]);
+                })
+            })
+        })
         .catch(error => console.log(error))
     }
 
     useEffect(() => {
-        chaptersData();
+        dataSet();
     }, [])
 
-    if(data === undefined){
-        return null;
+    // From child
+    function chapterClicked(childInput) {
+        console.log(childInput);
+        setLessonData(childInput);
     }
 
-
-    let choosenChapter = () => {
-        data.map(dataEl => {
-            
-            return dataEl.Lessons?.map(lessonsEl => {
-                console.log(lessonsEl);
-                let lessonsComp = 
-                <div>
-                    <h2>{lessonsEl.LessonNr}</h2>
-                    <p>{lessonsEl.LessonData}</p>
-                </div>;
-                return lessonOpened(lessonsComp)
-            })
-        })
-    }
-
-    let lessonOpened = (a) => {
-        return setShowLesson(a);
-    }
 
     return (
         <div className={Styles.container}>
@@ -53,8 +42,8 @@ function LandingProfile() {
             <div className={Styles.mainContent}>
                 <h1 className={Styles.profileSettingsHeader}>Profile Settings</h1>
                 <div className={Styles.componentsWrapper}>
-                    <Chapters choosenChapter={() => choosenChapter()} chaptersData={data} />
-                    <Lessons lessonOpened={showLesson} chaptersData={data}/>
+                    <Chapters getChapters={getData} chapterClicked={chapterClicked}/>
+                    <Lessons getLessonData={lessonData}/>
                     <Test />
                 </div>
             </div>
@@ -63,20 +52,3 @@ function LandingProfile() {
 }
 
 export default LandingProfile
-
-
-/*
-        data.map((dataEl, index) => {
-            return dataEl.Lessons?.map((lessonsEl, index) => {
-                if(lessonsEl.LessonNr === undefined) {
-                    return null
-                }
-                let lessonsComp = 
-                <div>
-                    <h2>{lessonsEl.LessonNr}</h2>
-                    <p>{lessonsEl.LessonData}</p>
-                </div>;
-                return lessonOpened(lessonsComp)
-            })
-        })
-*/

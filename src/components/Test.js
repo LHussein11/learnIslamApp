@@ -16,7 +16,7 @@ function Test() {
 
     return (
         <div className={Styles.container}>
-            <h4>Test</h4>
+            <h4 className={Styles.headingColor}>Test</h4>
             {testCard}
         </div>
     )
