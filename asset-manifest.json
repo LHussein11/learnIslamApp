@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/learnIslamApp/static/css/main.6c42a8cf.chunk.css",
+    "main.js": "/learnIslamApp/static/js/main.1b999932.chunk.js",
+    "main.js.map": "/learnIslamApp/static/js/main.1b999932.chunk.js.map",
+    "runtime-main.js": "/learnIslamApp/static/js/runtime-main.3c02d9f3.js",
+    "runtime-main.js.map": "/learnIslamApp/static/js/runtime-main.3c02d9f3.js.map",
+    "static/js/2.d91cbade.chunk.js": "/learnIslamApp/static/js/2.d91cbade.chunk.js",
+    "static/js/2.d91cbade.chunk.js.map": "/learnIslamApp/static/js/2.d91cbade.chunk.js.map",
+    "static/js/3.c2eba145.chunk.js": "/learnIslamApp/static/js/3.c2eba145.chunk.js",
+    "static/js/3.c2eba145.chunk.js.map": "/learnIslamApp/static/js/3.c2eba145.chunk.js.map",
+    "index.html": "/learnIslamApp/index.html",
+    "static/css/main.6c42a8cf.chunk.css.map": "/learnIslamApp/static/css/main.6c42a8cf.chunk.css.map",
+    "static/js/2.d91cbade.chunk.js.LICENSE.txt": "/learnIslamApp/static/js/2.d91cbade.chunk.js.LICENSE.txt",
+    "static/media/camel-picture.1430f471.png": "/learnIslamApp/static/media/camel-picture.1430f471.png",
+    "static/media/logo.c15b2e27.png": "/learnIslamApp/static/media/logo.c15b2e27.png",
+    "static/media/pray-picture.61f2bd22.png": "/learnIslamApp/static/media/pray-picture.61f2bd22.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3c02d9f3.js",
+    "static/js/2.d91cbade.chunk.js",
+    "static/css/main.6c42a8cf.chunk.css",
+    "static/js/main.1b999932.chunk.js"
+  ]
+}
