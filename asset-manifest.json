@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/learnIslamApp/static/css/main.6c42a8cf.chunk.css",
-    "main.js": "/learnIslamApp/static/js/main.4604184f.chunk.js",
-    "main.js.map": "/learnIslamApp/static/js/main.4604184f.chunk.js.map",
+    "main.js": "/learnIslamApp/static/js/main.edd3cc8e.chunk.js",
+    "main.js.map": "/learnIslamApp/static/js/main.edd3cc8e.chunk.js.map",
     "runtime-main.js": "/learnIslamApp/static/js/runtime-main.3c02d9f3.js",
     "runtime-main.js.map": "/learnIslamApp/static/js/runtime-main.3c02d9f3.js.map",
     "static/js/2.d2aaae00.chunk.js": "/learnIslamApp/static/js/2.d2aaae00.chunk.js",
@@ -20,6 +20,6 @@
     "static/js/runtime-main.3c02d9f3.js",
     "static/js/2.d2aaae00.chunk.js",
     "static/css/main.6c42a8cf.chunk.css",
-    "static/js/main.4604184f.chunk.js"
+    "static/js/main.edd3cc8e.chunk.js"
   ]
 }
